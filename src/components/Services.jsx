@@ -20,7 +20,9 @@ const Services = () => {
               <div className="rounded-full bg-blue-600 text-white p-5 w-20 h-20 absolute -top-11 group-hover:bg-white transition-all duration-200">
                 <BriefcaseIcon className="h-10 group-hover:text-blue-600" />
               </div>
-              <p className="text-xl group-hover:text-white">AGENT/JOB</p>
+              <p className="text-xl group-hover:text-white text-center">
+                AGENT/JOB
+              </p>
               <p className="text-center font-light group-hover:text-white">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
                 excepturi neque corporis dolor facere dolore praesentium nobis
@@ -41,7 +43,9 @@ const Services = () => {
               <div className="rounded-full bg-blue-600 text-white p-5 w-20 h-20 absolute -top-11 group-hover:bg-white transition-all duration-200">
                 <AcademicCapIcon className="h-10 group-hover:text-blue-600" />
               </div>
-              <p className="text-xl group-hover:text-white">BUSINESS LOAD</p>
+              <p className="text-xl group-hover:text-white text-center">
+                BUSINESS LOAN
+              </p>
               <p className="text-center font-light group-hover:text-white">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
                 excepturi neque corporis dolor facere dolore praesentium nobis
@@ -62,7 +66,7 @@ const Services = () => {
               <div className="rounded-full bg-blue-600 text-white p-5 w-20 h-20 absolute -top-11 group-hover:bg-white transition-all duration-200">
                 <HomeModernIcon className="h-10 group-hover:text-blue-600" />
               </div>
-              <p className="text-xl group-hover:text-white">
+              <p className="text-xl group-hover:text-white text-center">
                 STUDENT EMPOWERMENT
               </p>
               <p className="text-center font-light group-hover:text-white">
