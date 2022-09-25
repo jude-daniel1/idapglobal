@@ -5,11 +5,16 @@ import Fade from "react-reveal/Fade";
 const About = () => {
   return (
     <div className="flex flex-col space-y-5 min-h-screen">
-      <div className="flex items-center justify-center mb-5 md:mb-10 mt-20 md:mt-0">
+      <div className="flex flex-col items-center justify-center mb-5 md:mb-10 mt-20 md:mt-0">
         <h1 className="text-4xl font-extrabold">About Us</h1>
+        <p className="max-w-3xl text-center mt-5 font-light p-3">
+          We are the company with the biggest vision's of prosperity for all. We
+          have what it takes to create jobs for all Nigerians and to make things
+          easier for the common man.
+        </p>
       </div>
       <div
-        className="flex flex-col md:flex-row p-10 md:p-0 items-center "
+        className="flex flex-col md:flex-row p-10 pt-5 md:p-0 items-center "
         name="about"
       >
         <Fade left>
