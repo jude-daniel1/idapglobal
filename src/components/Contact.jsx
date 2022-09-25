@@ -9,7 +9,7 @@ import Fade from "react-reveal/Fade";
 const Contact = () => {
   return (
     <div className="min-h-screen flex flex-col justify-center" name="contact">
-      <div className="w-full flex justify-center item-center p-10 relative mb-10">
+      <div className="w-full flex justify-center item-center p-10 mb-10">
         <h1 className="text-3xl font-bold absolute">Contact Us</h1>
       </div>
       <div className="flex flex-col md:flex-row">
@@ -20,7 +20,7 @@ const Contact = () => {
                 Icon={MapPinIcon}
                 title={"Address"}
                 text={
-                  "Off Swali Road by Ereboter Filling Station Obelle Street Yenagoa, Bayelsa State "
+                  "Off Swali Road by Ereboter Filling Station Obelle Street Yenagoa, Bayelsa State. "
                 }
               />
             </Fade>
@@ -29,13 +29,14 @@ const Contact = () => {
                 title={"Phone"}
                 Icon={PhoneIcon}
                 text={"+2348118579797"}
+                text2={"+2349054327289"}
               />
             </Fade>
             <Fade left>
               <IconText
                 title={"Email"}
                 Icon={EnvelopeIcon}
-                text={"idapglobalservices@gmail.com"}
+                text={"npgocglobal@gmail.com"}
               />
             </Fade>
           </div>

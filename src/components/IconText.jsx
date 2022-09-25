@@ -1,6 +1,6 @@
 import React from "react";
 
-const IconText = ({ Icon, text, title }) => {
+const IconText = ({ Icon, text, text2, title }) => {
   return (
     <div className="flex justify-start">
       <div className="justify-start items-center p-3">
@@ -9,6 +9,7 @@ const IconText = ({ Icon, text, title }) => {
       <div className="flex flex-col space-y-3">
         <p className="font-bold text-xl">{title}</p>
         <p className="font-light">{text}</p>
+        <p className="font-light">{text2}</p>
       </div>
     </div>
   );

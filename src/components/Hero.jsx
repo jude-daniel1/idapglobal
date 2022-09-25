@@ -11,7 +11,7 @@ export const Hero = () => {
     >
       <Fade left>
         <div className="md:w-[50%] order-2 md:order-1">
-          <h3 className="font-extrabold text-[#4285f4] text-7xl -mt-[100px] hidden md:block md:-mt-[4px] lg:-mt-[130px] md:text-6xl lg:text-7xl">
+          <h3 className="font-extrabold text-[#4285f4] mt-[30px] md:-mt-[4px] lg:-mt-[130px]  text-5xl md:text-6xl lg:text-7xl">
             Welcome
           </h3>
           <p className="text-2xl md:text-2xl font-bold md:font-bold mt-7">
@@ -19,13 +19,21 @@ export const Hero = () => {
           </p>
 
           <p className="mt-6">
-            The Company with the global vission of wealth and prosperity for.
+            The Company with the global vision of wealth and prosperity for all.
             {/* all. Lorem ipsum, dolor sit amet consectetur adipisicing elit.
             Delectus a deleniti tempore deserunt autem ea quibusdam molestias in
             reprehenderit? Possimus? */}
           </p>
 
-          <Link>
+          <Link
+            activeClass="active"
+            to="services"
+            spy={true}
+            smooth={true}
+            duration={500}
+            offset={-80}
+            delay={20}
+          >
             <button className="text-xl px-12 py-3 mt-10">Get Started</button>
           </Link>
         </div>

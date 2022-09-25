@@ -2,6 +2,23 @@ import React, { useState } from "react";
 import { Link } from "react-scroll";
 import { XMarkIcon, Bars3Icon } from "@heroicons/react/24/solid";
 import { useEffect } from "react";
+import { motion } from "framer-motion";
+
+const menu = {
+  initial: {
+    x: 0,
+    opacity: 0,
+    scale: 0,
+  },
+  animate: {
+    x: 200,
+    opacity: 1,
+    scale: 1,
+  },
+  transition: {
+    duration: 1.5,
+  },
+};
 
 const Navbar = () => {
   const [active, setActive] = useState("home");
@@ -10,13 +27,34 @@ const Navbar = () => {
   useEffect(() => {
     window.addEventListener("scroll", function (event) {
       if (window.scrollY > 100) {
-        console.log(event);
         setScrollHeading(true);
       } else {
         setScrollHeading(false);
       }
     });
   });
+
+  function close(e) {
+    console.log("You clicked me");
+    console.log(e.target.id);
+    setOpen(false);
+    switch (e.target.id) {
+      case "home":
+        setActive("home");
+        break;
+      case "services":
+        setActive("services");
+        break;
+      case "contact":
+        setActive("contact");
+        break;
+      case "about":
+        setActive("about");
+        break;
+      default:
+        setActive("home");
+    }
+  }
 
   return (
     <>
@@ -39,7 +77,7 @@ const Navbar = () => {
             >
               <li
                 className={active === "home" && "text-[#4285f4] font-bold"}
-                onClick={() => setActive("home")}
+                onClick={close}
               >
                 Home
               </li>
@@ -55,7 +93,7 @@ const Navbar = () => {
             >
               <li
                 className={active === "about" && "text-[#4285f4] font-bold"}
-                onClick={() => setActive("about")}
+                onClick={close}
               >
                 About
               </li>
@@ -71,7 +109,7 @@ const Navbar = () => {
             >
               <li
                 className={active === "services" && "text-[#4285f4] font-bold"}
-                onClick={() => setActive("services")}
+                onClick={close}
               >
                 Services
               </li>
@@ -81,12 +119,13 @@ const Navbar = () => {
               to="contact"
               spy={true}
               smooth={true}
+              offset={-100}
               duration={500}
               delay={20}
             >
               <li
                 className={active === "contact" && "text-[#4285f4] font-bold"}
-                onClick={() => setActive("contact")}
+                onClick={close}
               >
                 Contact Us
               </li>
@@ -103,12 +142,41 @@ const Navbar = () => {
         }`}
       >
         <div className="flex justify-between items-center px-3 max-w-6xl mx-auto  h-full bg-white z-10">
-          <div>
+          <motion.div
+            initial={{
+              x: -200,
+              opacity: 0,
+              scale: 0.5,
+            }}
+            animate={{
+              x: 0,
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              duration: 1.5,
+            }}
+          >
             <h1 className="text-black font-bold text-2xl">
               <span className="">IDAP</span>Global
             </h1>
-          </div>
-          <div className="hidden md:flex items-center h-full">
+          </motion.div>
+          <motion.div
+            className="hidden md:flex items-center h-full"
+            initial={{
+              x: 200,
+              opacity: 0,
+              scale: 0.5,
+            }}
+            animate={{
+              x: 0,
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              duration: 1.5,
+            }}
+          >
             <ul className="flex text-black items-center space-x-3">
               <Link
                 activeClass="active"
@@ -176,7 +244,7 @@ const Navbar = () => {
               </Link>
               <button>Sign up</button>
             </ul>
-          </div>
+          </motion.div>
           <div className="block md:hidden">
             <Bars3Icon
               className="h-8  cursor-pointer"
